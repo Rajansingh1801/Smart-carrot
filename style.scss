@@ -1,0 +1,285 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  transition: 200ms ease-out;
+}
+body {
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: VisbyRoundCF-Medium;
+  src: url("./assets/fonts/VisbyRoundCF-Medium.otf");
+}
+
+@font-face {
+  font-family: VisbyRoundCF-Demibold;
+  src: url("./assets/fonts/VisbyRoundCF-DemiBold.otf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+p,
+a,
+span {
+  font-family: VisbyRoundCF-Medium;
+}
+
+// code start
+
+main {
+  section.one {
+    z-index: 1;
+    height: 100vh;
+    background-image: url(./images/mainbg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: antiquewhite;
+    position: relative;
+    .nav {
+      width: 100%;
+      height: 102px;
+      background-color: rgba(16, 16, 17, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .one-body {
+      display: flex;
+      height: calc(100% - 103px);
+      justify-content: center;
+      align-items: center;
+      h1 {
+        font-family: "Titan One", cursive;
+        font-size: 50px;
+      }
+      p {
+        margin-top: 80px;
+        font-size: 29px;
+      }
+    }
+  }
+
+  section.about {
+    height: 100vh;
+    background: url(./images/aboutbg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .timer {
+      position: absolute;
+      top: -70px;
+      left: 0%;
+      right: 0%;
+      .timer-body {
+        .timer-cont {
+          height: 146px;
+          z-index: 2;
+          width: 146px;
+          border-radius: 14px;
+          background-color: rgba(255, 255, 255, 1);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0px 0px 14px rgb(0, 0, 0, 0.2);
+          div {
+            color: black;
+            text-align: center;
+            h2 {
+              font-size: 80px;
+              font-family: VisbyRoundCF-Demibold;
+              margin-bottom: 0;
+            }
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    .about-body {
+      margin-top: 40px;
+      z-index: 1;
+      p {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    .design {
+      z-index: -1;
+      .about-right-design {
+        position: absolute;
+        bottom: 5;
+        right: -10px;
+      }
+      .about-left-design {
+        position: absolute;
+        bottom: 10;
+        left: 0%;
+      }
+    }
+  }
+  section.benfit {
+    height: 670px;
+    width: 100%;
+    background-image: url(./images/benfit-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .benfit-log {
+      margin-top: -70px;
+    }
+    .card-body {
+      margin-top: 140px;
+      background-color: white;
+      height: 237px;
+      width: 229px;
+      text-align: center;
+      border-radius: 14px;
+      filter: drop-shadow(0px 0px 20px rgb(0, 0, 0, 0.2));
+      img {
+        margin-top: -90px;
+      }
+      p {
+        margin-top: 22px;
+        padding: 0px 8px;
+        font-size: 18px;
+      }
+    }
+  }
+  section.contact {
+    height: calc(100vh);
+    background-image: url(./images/contact-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    .cont-body {
+      padding-left: 130px;
+      padding-right: 100px;
+      padding-bottom: 40px;
+      h2 {
+        font-size: 60px;
+        font-family: VisbyRoundCF-Demibold;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+
+    form {
+      margin-top: -70px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.2);
+      label {
+        font-size: 18px;
+        font-family: VisbyRoundCF-Demibold;
+      }
+      input {
+        background: #fff7ef;
+        width: 100%;
+        height: 50px;
+        border-radius: 14px;
+        border: 1px solid #fd973a;
+        margin-top: 8px;
+        margin-bottom: 20px;
+        padding: 5px 10px;
+        outline: none;
+      }
+      input:is(:focus) {
+        border: 1px solid #da6d07;
+        outline: none;
+      }
+      textarea {
+        margin-top: 10px;
+        background: #fff7ef;
+        width: 100%;
+        height: 50px;
+        border-radius: 14px;
+        border: 1px solid #fd973a;
+        height: 160px;
+        width: 100%;
+        padding: 7px 5px;
+      }
+      input::placeholder {
+        color: #ffe1d8;
+      }
+      textarea::placeholder {
+        color: #ffe1d8;
+      }
+      .btn {
+        background-color: transparent;
+        margin-top: 60px;
+      }
+      .btn img {
+        animation-duration: 500ms;
+        // animation-iteration-count: infinite;
+        transform-origin: bottom;
+      }
+      .btn img:hover {
+        animation-name: bounce;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes bounce {
+        0% {
+          transform: scale(1);
+        }
+        70% {
+          transform: scale(1.12);
+        }
+        100% {
+          transform: scale(1.11);
+        }
+      }
+    }
+    .designloog {
+      position: absolute;
+      top: -150px;
+      left: 5%;
+    }
+  }
+}
+footer {
+  height: 265px;
+  background-image: url(./images/foot.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  p {
+    font-size: 16px;
+    font-family: VisbyRoundCF-Demibold;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #d3d2d4;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f2741e;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fd973a;
+}
+
+.iti {
+  width: 100%;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
