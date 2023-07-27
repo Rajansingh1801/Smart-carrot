@@ -66,15 +66,35 @@ main section.about {
   display: flex;
   align-items: center;
 }
+@media (max-width: 992px) {
+  main section.about {
+    height: 100%;
+    padding: 20px 0px;
+  }
+}
+@media (max-width: 992px) {
+  main section.about {
+    height: 100%;
+  }
+}
 main section.about .timer {
   position: absolute;
-  top: -70px;
+  top: -80px;
   left: 0%;
   right: 0%;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  main section.about .timer {
+    position: relative;
+  }
+}
+main section.about .timer .timer-body {
+  text-align: center;
 }
 main section.about .timer .timer-body .timer-cont {
+  margin: auto;
   height: 146px;
-  z-index: 2;
   width: 146px;
   border-radius: 14px;
   background-color: rgb(255, 255, 255);
@@ -98,6 +118,11 @@ main section.about .timer .timer-body .timer-cont div p {
 main section.about .about-body {
   margin-top: 40px;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  main section.about .about-body {
+    margin-top: 0;
+  }
 }
 main section.about .about-body p {
   font-size: 18px;
@@ -124,6 +149,12 @@ main section.benfit {
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 992px) {
+  main section.benfit {
+    height: 100%;
+    padding-bottom: 200px;
+  }
+}
 main section.benfit .benfit-log {
   margin-top: -70px;
 }
@@ -135,6 +166,12 @@ main section.benfit .card-body {
   text-align: center;
   border-radius: 14px;
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+}
+@media (max-width: 992px) {
+  main section.benfit .card-body {
+    margin-top: 0;
+    margin: auto !important;
+  }
 }
 main section.benfit .card-body img {
   margin-top: -90px;
@@ -152,10 +189,23 @@ main section.contact {
   background-size: cover;
   position: relative;
 }
+@media (max-width: 768px) {
+  main section.contact {
+    height: 100%;
+    padding-top: 150px;
+    text-align: center;
+  }
+}
 main section.contact .cont-body {
   padding-left: 130px;
   padding-right: 100px;
   padding-bottom: 40px;
+}
+@media (max-width: 1200px) {
+  main section.contact .cont-body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 main section.contact .cont-body h2 {
   font-size: 60px;
@@ -169,6 +219,13 @@ main section.contact form {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  main section.contact form {
+    margin-top: 0px;
+    margin-bottom: 26px;
+    text-align: start;
+  }
 }
 main section.contact form label {
   font-size: 18px;
@@ -247,10 +304,16 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @media (max-width: 576px) {
+    height: 100px;
+  }
 }
 footer p {
   font-size: 16px;
   font-family: VisbyRoundCF-Demibold;
+  @media (max-width: 576px) {
+    margin-bottom: 0;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -280,4 +343,4 @@ footer p {
 
 .f-wrap {
   flex-wrap: wrap;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
